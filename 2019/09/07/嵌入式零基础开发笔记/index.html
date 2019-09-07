@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2019/8 | HuaGe</title>
+  <title itemprop="name">嵌入式学习笔记 | HuaGe</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -383,146 +383,180 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
 <div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
-    </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2019年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      09月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2019/09/07/嵌入式零基础开发笔记/">
-                          <span style="color:#0bf;">
-                          07日09:44:02</span>
-                          嵌入式学习笔记
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2019/09/01/hexo博客搭建教程/">
-                          <span style="color:#0bf;">
-                          01日11:43:43</span>
-                          Hexo搭建简单博客
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      08月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2019/08/29/JavaWeb学习笔记/">
-                          <span style="color:#0bf;">
-                          29日23:18:25</span>
-                          JavaWeb学习笔记
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2019/08/09/1/">
-                          <span style="color:#0bf;">
-                          09日11:55:00</span>
-                          我需要的人生
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2018年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2018/12/12/Hexo-Theme-Sakura/">
-                          <span style="color:#0bf;">
-                          12日22:16:01</span>
-                          Hexo-Theme-Sakura
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">嵌入式学习笔记</h1>
+            <p class="entry-census">HuaGe&nbsp;·&nbsp;2019-9-7&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <h2 id="第一章，了解Zigbee"><a href="#第一章，了解Zigbee" class="headerlink" title="第一章，了解Zigbee"></a>第一章，了解Zigbee</h2><h3 id="1-什么是Zigbee？它能干什么？为什么引入Zigbee？"><a href="#1-什么是Zigbee？它能干什么？为什么引入Zigbee？" class="headerlink" title="1.什么是Zigbee？它能干什么？为什么引入Zigbee？"></a>1.什么是Zigbee？它能干什么？为什么引入Zigbee？</h3><p>Zigbee是无限设备之间的一种通信方式，类似人与人之间用普通话进行交流，普通话是一种通信方式。Zigbee通信方式，igbee协议，说的都是一回事。</p>
+<pre><code>Zigbee的作用是用来构建无限局域网</code></pre><p>各无限通信方式比较</p>
+<ul>
+<li>蓝牙：功耗比较低，通信距离短，组建网络节点数少（7~8）</li>
+<li>WiFi：通信速率比较大，功耗大，等</li>
+<li>Zigbee：<ul>
+<li>优点：可以组建大规模网络，功耗低</li>
+<li>缺点：通信速率比较小，250kbps</li>
+</ul>
+</li>
+<li>注意：Zigbee只是完成数据的通信的工作，而要实现具体的实用而又强大的功能，需要另外的处理器来进行数据的分析处理</li>
+</ul>
+<h3 id="2-IAR软件的安装"><a href="#2-IAR软件的安装" class="headerlink" title="2.IAR软件的安装"></a>2.IAR软件的安装</h3><ol>
+<li>管理员运行IAR kegen PartA.exe,然后点击getID</li>
+<li>运行EW8051-EV-8103-Web.exe,Name随便填</li>
+</ol>
+<h3 id="3-创建新的工程"><a href="#3-创建新的工程" class="headerlink" title="3.创建新的工程"></a>3.创建新的工程</h3><ol>
+<li>File -&gt; New -&gt; Workspace</li>
+<li>Project -&gt; Create New Project -&gt; ok -&gt;指定工程文件夹（可以预先在本地自己创建一个文件夹）和工程文件名</li>
+<li>新建一个文件，保存为.c文件</li>
+<li>把.c文件添加进工程，右击左侧“工程名-Debug”-&gt;Add</li>
+<li>编译 -&gt; 点击上方Make -&gt;如果 0 errors就是编译成功</li>
+</ol>
+<h3 id="4-选项配置"><a href="#4-选项配置" class="headerlink" title="4.选项配置"></a>4.选项配置</h3><pre><code>右击“工程名-Debug” - &gt;options</code></pre><ol>
+<li>Genernal Option -&gt; Device 选择 Texas Instruments cc2530F256</li>
+<li>Linker -&gt; Output -&gt; 把Override default勾上   ,Allow C-SPY-specific extra output file勾上</li>
+<li>Debugger -&gt; Driver -&gt; 选择 Texas Instruments</li>
+</ol>
+<h3 id="5-把模块连接上电脑，并安装驱动"><a href="#5-把模块连接上电脑，并安装驱动" class="headerlink" title="5.把模块连接上电脑，并安装驱动"></a>5.把模块连接上电脑，并安装驱动</h3><p>在设备管理器中找到smartRF04DD ==&gt; CC2430DB</p>
+<h3 id="6-仿真"><a href="#6-仿真" class="headerlink" title="6.仿真"></a>6.仿真</h3><p>先要重置仿真器</p>
+<h3 id="7-生成hex文件"><a href="#7-生成hex文件" class="headerlink" title="7.生成hex文件"></a>7.生成hex文件</h3><p>右键工程-&gt;options<br>Linker -&gt; Extra Output -&gt; 把General extra output file勾上，把overrider default勾上并命名为.hex文件；把output format 改为inter-extended;重新编译后 Debug/Exe文件夹里会生成.hex文件</p>
+<h3 id="8-安装烧写软件"><a href="#8-安装烧写软件" class="headerlink" title="8.安装烧写软件"></a>8.安装烧写软件</h3><ol>
+<li>Flash image 选中.hex文件</li>
+<li>重置仿真器</li>
+<li>点击perform actions下载<br>注意：如果已经在仿真状态，要退出仿真状态才能下载</li>
+</ol>
+<h2 id="第二章-硬件电路了解与IO操作"><a href="#第二章-硬件电路了解与IO操作" class="headerlink" title="第二章 硬件电路了解与IO操作"></a>第二章 硬件电路了解与IO操作</h2><ol>
+<li><p>cc2530芯片电路了解</p>
+</li>
+<li><p>核心板/电路地板电路了解</p>
+</li>
+<li><p>控制IO口的输入输出<br> cc2530一共具有21个通用IO口，其中这21个IO口分为三组P0,P1,P2组这些口子都可以作为普通或对应的片上外设（串口，ADC）控制<br>  P0_0<del>PO_7 P1_0</del>P1_7 P2_0~P2_4<br>  其中P1_O P1_1具有20mA的输出驱动能力，其余只有4mA</p>
+<pre><code> PxSEL寄存器(x=0,1,2),它的作用是用来配置它对应的IO口是普通IO模式，还是片上外设模式。0表示普通IO，1表示片上外设模式。默认为0   
+ 注意: P2只有5个IO口，但是P2_1 P2_2是专门用来下载程序用的，所以，这两个IO口不需要配置，因为P2SEL的低3位分别对应的是P2_0  P2_3  P2_4   
+ PxDIR寄存器(x=0,1,2),它的作用是用来配置它对应的IO口是输出模式，还是输入模式。0表示输入模式，1表示输出模式。默认为0。具体的对应关系与PxSEL一致。       
+ PxINP寄存器(x=0,1,2),它的作用是用来配置它对应的IO口在输入模式下，是上下拉模式，还是高阻态模式。0表示上下拉模式，1表示高阻态模式。   
+ 注意:由于P2组只有5个引脚，所以该寄存器的高3位用来决定在配置上下拉模式时，到底是上拉还是下拉，0表示上拉，1表示下拉。   
+ P2INP   7      6         5      4     3       2        1       0
+        P2组  P1组 P0组               P2_4   P2_3    P2_0    
+
+ eg:  P1_2设置为上拉输入
+      P1SEL &amp;= 0xFB;//1111 1011把P1_2设置为普通IO模式
+      P1DIR &amp;= 0xFB;//1111 1011把P1_2设置为输入模式
+      P1INP &amp;= 0xFB;//1111 1011把P1_2设置为上下拉模式
+      P2INP &amp;= 0xBF;//1011 1111把P1组设置为上拉模式</code></pre><h2 id="第三章-外部中断"><a href="#第三章-外部中断" class="headerlink" title="第三章 外部中断"></a>第三章 外部中断</h2><p>外部中断配置步骤<br>(1)初始化IO口工作在普通IO，上拉输入模式<br>(2)使能源中断允许位  PxIEN<br>(3)使能组中断允许位  PxIE<br> P0IE是IEN1(0xB8)的第5位<br> P1IE是IEN2(0x9A)的第4位<br> P2IE是IEN2的第1位<br>(4)设置上升沿还是下降沿触发(PICTL,0代表上升沿，1代表下降沿)<br>(5)使能总中断允许位  EA<br> EA是IEN0(0xA8)的第7位<br>(6)中断处理函数的写法<br> void delay(unsigned int n)//延时n毫秒<br> {</p>
+<pre><code>unsigned int i,j;
+for(i=n;i&gt;0;i--)
+{
+   for(j=587;j&gt;0;j--);
+}</code></pre><p> }</p>
+<p> #pragma optimize=none//不进行编译优化<br> #pragma vector=P1INT_VECTOR//设置中断向量</p>
+<p> __interrupt void exint_isr(void)//isr:interrupt server routine<br> {</p>
+<pre><code> if(P1IFG &amp; 0x04)//0000 0100,是由P1_2触发的中断
+ {
+     delay(100); //按键消抖
+     if(KEY == 0)
+     {
+         state = !state; 
+         led_control(0,state);
+         led_control(1,state);
+     }
+ }
+ P1IFG = 0;//清P1组内中断状态标志位
+ P1IF = 0;//清P1组中断标志位</code></pre><p> }</p>
+</li>
+</ol>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/realityanddream/cdn@1.1/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/realityanddream/cdn@1.1/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
       </article>
-    </div>
-  </div>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2019/09/01/hexo博客搭建教程/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/realityanddream/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hexo搭建简单博客</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="https://realityanddream.github.io/" class="profile gravatar"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" itemprop="image" alt="HuaGe" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://realityanddream.github.io/" itemprop="url" rel="author">HuaGe</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
