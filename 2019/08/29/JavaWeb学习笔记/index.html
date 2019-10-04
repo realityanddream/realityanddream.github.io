@@ -568,8 +568,19 @@ doGet():接受并处理所有get提交方式的请求
 doPost():接受并处理所有post提交方式的请求
 Servlet要想使用，必须配置
 Servlet2.5：web.xml
-Servlet3.0:@WebServlet</code></pre><hr>
+Servlet3.0:@WebServlet</code></pre><ol>
+<li>init():<pre><code> a.默认第一次访问时执行Servlet时会被执行（只执行这一次）
+ b.可修改为Tomact启动时自动执行
+ &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;//数字代表顺序</code></pre></li>
+<li>service() -&gt; doGet() -&gt; doPost()</li>
+</ol>
+<hr>
 <p>以上是暑假花了一个星期学的知识。。。😭😭😭</p>
+<h3 id="9-路径问题"><a href="#9-路径问题" class="headerlink" title="9.路径问题"></a>9.路径问题</h3><ol>
+<li>web.xml 的/:代表项目根路径</li>
+<li>jsp中的/:代表服务器根路径</li>
+<li>构建路径,WelContent：根目录</li>
+</ol>
 
         </div>
         <!-- .entry-content -->

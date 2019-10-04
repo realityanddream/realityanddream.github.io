@@ -456,28 +456,41 @@
       P1SEL &amp;= 0xFB;//1111 1011把P1_2设置为普通IO模式
       P1DIR &amp;= 0xFB;//1111 1011把P1_2设置为输入模式
       P1INP &amp;= 0xFB;//1111 1011把P1_2设置为上下拉模式
-      P2INP &amp;= 0xBF;//1011 1111把P1组设置为上拉模式</code></pre><h2 id="第三章-外部中断"><a href="#第三章-外部中断" class="headerlink" title="第三章 外部中断"></a>第三章 外部中断</h2><p>外部中断配置步骤<br>(1)初始化IO口工作在普通IO，上拉输入模式<br>(2)使能源中断允许位  PxIEN<br>(3)使能组中断允许位  PxIE<br> P0IE是IEN1(0xB8)的第5位<br> P1IE是IEN2(0x9A)的第4位<br> P2IE是IEN2的第1位<br>(4)设置上升沿还是下降沿触发(PICTL,0代表上升沿，1代表下降沿)<br>(5)使能总中断允许位  EA<br> EA是IEN0(0xA8)的第7位<br>(6)中断处理函数的写法<br> void delay(unsigned int n)//延时n毫秒<br> {</p>
-<pre><code>unsigned int i,j;
-for(i=n;i&gt;0;i--)
-{
-   for(j=587;j&gt;0;j--);
-}</code></pre><p> }</p>
-<p> #pragma optimize=none//不进行编译优化<br> #pragma vector=P1INT_VECTOR//设置中断向量</p>
-<p> __interrupt void exint_isr(void)//isr:interrupt server routine<br> {</p>
-<pre><code> if(P1IFG &amp; 0x04)//0000 0100,是由P1_2触发的中断
+      P2INP &amp;= 0xBF;//1011 1111把P1组设置为上拉模式</code></pre><h2 id="第三章-外部中断"><a href="#第三章-外部中断" class="headerlink" title="第三章 外部中断"></a>第三章 外部中断</h2><p>外部中断配置步骤<br>(1)初始化IO口工作在普通IO，上拉输入模式<br>(2)使能源中断允许位  PxIEN<br>(3)使能组中断允许位  PxIE<br> P0IE是IEN1(0xB8)的第5位<br> P1IE是IEN2(0x9A)的第4位<br> P2IE是IEN2的第1位<br>(4)设置上升沿还是下降沿触发(PICTL,0代表上升沿，1代表下降沿)<br>(5)使能总中断允许位  EA<br> EA是IEN0(0xA8)的第7位<br>(6)中断处理函数的写法</p>
+<pre><code> void delay(unsigned int n)//延时n毫秒
  {
-     delay(100); //按键消抖
-     if(KEY == 0)
-     {
-         state = !state; 
-         led_control(0,state);
-         led_control(1,state);
-     }
+    unsigned int i,j;
+    for(i=n;i&gt;0;i--)
+    {
+       for(j=587;j&gt;0;j--);
+    }
  }
- P1IFG = 0;//清P1组内中断状态标志位
- P1IF = 0;//清P1组中断标志位</code></pre><p> }</p>
-</li>
+
+ #pragma optimize=none//不进行编译优化
+ #pragma vector=P1INT_VECTOR//设置中断向量
+
+ __interrupt void exint_isr(void)//isr:interrupt server routine
+ {
+     if(P1IFG &amp; 0x04)//0000 0100,是由P1_2触发的中断
+     {
+         delay(100); //按键消抖
+         if(KEY == 0)
+         {
+             state = !state; 
+             led_control(0,state);
+             led_control(1,state);
+         }
+     }
+     P1IFG = 0;//清P1组内中断状态标志位
+     P1IF = 0;//清P1组中断标志位
+ }</code></pre><h2 id="第四章-协议栈"><a href="#第四章-协议栈" class="headerlink" title="第四章 协议栈"></a>第四章 协议栈</h2></li>
 </ol>
+<ul>
+<li>CoordinatorEB-Pro 协调器</li>
+<li>EndDeviceEB-Pro 终端</li>
+<li>RouterEB-Pro 路由器</li>
+<li>ps:pro 是改进版，一般选用这个</li>
+</ul>
 
         </div>
         <!-- .entry-content -->
@@ -505,9 +518,26 @@ for(i=n;i&gt;0;i--)
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/09/19/Spring学习笔记/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/realityanddream/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Spring学习笔记</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
             <a href="/2019/09/01/hexo博客搭建教程/" rel="next">
               <div class="background">
